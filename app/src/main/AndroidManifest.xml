@@ -13,6 +13,22 @@
         android:theme="@style/Theme.ConnectSalud"
         tools:targetApi="31">
         <activity
+            android:name=".Register"
+            android:label="Registro"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="Home"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.MainActivity" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
