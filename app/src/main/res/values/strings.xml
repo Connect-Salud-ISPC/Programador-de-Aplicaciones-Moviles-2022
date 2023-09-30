@@ -8,4 +8,5 @@
     <string name="img_logo">Imagen del logo</string>
     <string name="button_passforgot">¿Olvidó su contraseña?</string>
     <string name="button_register">Registrarse</string>
+    <string name="button_perfil">Perfil</string>
 </resources>
