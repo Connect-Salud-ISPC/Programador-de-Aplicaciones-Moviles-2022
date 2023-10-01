@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ConnectSalud"
         tools:targetApi="31">
         <activity
+            android:name=".Profesionales"
+            android:exported="false" />
+        <activity
+            android:name=".Reserve"
+            android:exported="false" />
+        <activity
+            android:name=".activity_reserve"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:label="Perfil"
             android:parentActivityName=".Home">

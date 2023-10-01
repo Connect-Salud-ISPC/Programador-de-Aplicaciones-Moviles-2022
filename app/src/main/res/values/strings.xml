@@ -9,4 +9,6 @@
     <string name="button_passforgot">¿Olvidó su contraseña?</string>
     <string name="button_register">Registrarse</string>
     <string name="button_perfil">Perfil</string>
+    <string name="button_reserve">Reservar Turno</string>
+    <string name="button_profesionales">Profesionales</string>
 </resources>
