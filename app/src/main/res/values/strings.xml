@@ -12,4 +12,5 @@
     <string name="button_reserve">Reservar Turno</string>
     <string name="button_profesionales">Profesionales</string>
     <string name="button_turnos">Mis Turnos</string>
+    <string name="button_cerrar_sesion">Cerrar Sesion</string>
 </resources>

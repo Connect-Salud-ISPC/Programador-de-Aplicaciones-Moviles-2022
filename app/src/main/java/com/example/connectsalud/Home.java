@@ -32,4 +32,9 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Turnos.class);
         startActivity(intent);
     }
+
+    public void launchCerrar_Sesion(View view) {
+        Intent intent = new Intent(this, Cerrar_Sesion.class);
+        startActivity(intent);
+    }
 }
