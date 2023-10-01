@@ -18,4 +18,9 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
+
+    public void launchReserve(View view) {
+        Intent intent = new Intent(this, Reserve.class);
+        startActivity(intent);
+    }
 }
