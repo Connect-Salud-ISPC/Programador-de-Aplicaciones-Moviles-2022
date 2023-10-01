@@ -18,4 +18,23 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
+
+    public void launchReserve(View view) {
+        Intent intent = new Intent(this, Reserve.class);
+        startActivity(intent);
+    }
+    public void launchProfesionales(View view) {
+        Intent intent = new Intent(this, Profesionales.class);
+        startActivity(intent);
+    }
+
+    public void launchTurnos(View view) {
+        Intent intent = new Intent(this, Turnos.class);
+        startActivity(intent);
+    }
+
+    public void launchCerrar_Sesion(View view) {
+        Intent intent = new Intent(this, Cerrar_Sesion.class);
+        startActivity(intent);
+    }
 }
