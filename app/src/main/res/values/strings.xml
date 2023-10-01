@@ -11,4 +11,5 @@
     <string name="button_perfil">Perfil</string>
     <string name="button_reserve">Reservar Turno</string>
     <string name="button_profesionales">Profesionales</string>
+    <string name="button_turnos">Mis Turnos</string>
 </resources>

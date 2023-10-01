@@ -26,7 +26,7 @@
         android:onClick="launchReserve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_perfil"
+        app:layout_constraintTop_toBottomOf="@id/button_turnos"
         tools:text="@string/button_reserve" />
     <Button
         android:id="@+id/button_profesionales"
@@ -39,4 +39,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_reserve"
         tools:text="@string/button_profesionales" />
+    <Button
+        android:id="@+id/button_turnos"
+        android:layout_width="183dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/button_turnos"
+        android:onClick="launchTurnos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_perfil"
+        tools:text="@string/button_turnos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
