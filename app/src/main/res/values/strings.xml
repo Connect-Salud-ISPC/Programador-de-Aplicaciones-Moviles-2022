@@ -1,16 +1,33 @@
 <resources>
     <string name="app_name">ConnectSalud</string>
     <string name="text_welcome">Bienvenido</string>
-    <string name="text_mesagge1">Completa con tus datos para ingresar</string>
+    <string name="text_message1">Completa con tus datos para ingresar</string>
     <string name="input_email">Email</string>
     <string name="input_pass">Contraseña</string>
+    <string name="input_passagain">Repite Contraseña</string>
     <string name="button_login">Iniciar Sesión</string>
     <string name="img_logo">Imagen del logo</string>
     <string name="button_passforgot">¿Olvidó su contraseña?</string>
     <string name="button_register">Registrarse</string>
-    <string name="button_perfil">Perfil</string>
+    <string name="button_perfil">Mi Perfil</string>
     <string name="button_reserve">Reservar Turno</string>
     <string name="button_profesionales">Profesionales</string>
     <string name="button_turnos">Mis Turnos</string>
     <string name="button_cerrar_sesion">Cerrar Sesion</string>
+
+    <!-- Registro -->
+    <string name="text_message2">Completa el formulario para registrarte</string>
+    <string name="input_dni">DNI</string>
+    <string name="input_nombre">Nombre</string>
+    <string name="input_apellido">Apellido</string>
+    <string name="input_telefono">Teléfono</string>
+    <string name="input_nacimiento">Fecha de Nacimiento</string>
+    <string name="button_registrarme">Registrarse</string>
+
+    <!-- Sacar turno -->
+    <string name="text_message3">Selecciona cada una de las opciones disponibles</string>
+    <string name="text_message_especialidad">Selecciona una especialidad</string>
+    <string name="text_message_profesional">Selecciona un profesional</string>
+    <string name="text_message_diahora">Selecciona un día y horario</string>
+
 </resources>

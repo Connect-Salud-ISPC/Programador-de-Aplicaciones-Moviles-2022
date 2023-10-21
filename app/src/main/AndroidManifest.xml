@@ -13,45 +13,6 @@
         android:theme="@style/Theme.ConnectSalud"
         tools:targetApi="31">
         <activity
-            android:name=".Cerrar_Sesion"
-            android:exported="false" />
-        <activity
-            android:name=".Turnos"
-            android:exported="false" />
-        <activity
-            android:name=".Profesionales"
-            android:exported="false" />
-        <activity
-            android:name=".Reserve"
-            android:exported="false" />
-        <activity
-            android:name=".activity_reserve"
-            android:exported="false" />
-        <activity
-            android:name=".Profile"
-            android:label="Perfil"
-            android:parentActivityName=".Home">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.connectsalud.Home" />
-        </activity>
-        <activity
-            android:name=".Register"
-            android:label="Registro"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.connectsalud.MainActivity" />
-        </activity>
-        <activity
-            android:name=".Home"
-            android:label="Home"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.connectsalud.MainActivity" />
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -60,6 +21,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RegistroPaciente"
+            android:label="Registro"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="Inicio"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="Mi Perfil"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.Home" />
+        </activity>
+        <activity
+            android:name=".Turnos"
+            android:label="Mis Turnos"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.Home" />
+        </activity>
+        <activity
+            android:name=".Reserve"
+            android:label="Sacar Turno"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.Home" />
+        </activity>
+        <activity
+            android:name=".Profesionales"
+            android:label="Profesionales"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.connectsalud.Home" />
+        </activity>
+        <activity
+            android:name=".CerrarSesion"
+            android:exported="false" />
     </application>
-
 </manifest>

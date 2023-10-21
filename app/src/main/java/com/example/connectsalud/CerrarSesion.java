@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Cerrar_Sesion extends AppCompatActivity {
+public class CerrarSesion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
