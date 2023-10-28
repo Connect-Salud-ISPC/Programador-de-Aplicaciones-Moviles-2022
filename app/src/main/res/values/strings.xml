@@ -51,5 +51,20 @@
     </string-array>
 
 
+    <!-- Profesionales-->
+    <string name="lista">Ver lista de profesionales disponibles</string>
+    <string name="especialidad">Especialidad</string>
+    <string name="profesional">Especialidad</string>
+
+    <!-- Perfil-->
+    <string name="dni">DNI</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="telefono">Teléfono</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="email">Ingresar el email</string>
+    <string name="button_editar">Editar</string>
+    <string name="button_guardar">Guardar</string>
+
 
 </resources>
