@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.connectsalud.db.DbUsuarios;
-import com.example.connectsalud.entidades.Usuario;
+import com.example.connectsalud.Entidades.Usuarios;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class EditarActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class EditarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver);
 
-        txtNombre = findViewById(R.id.txtNombre);
+        Nombre = findViewById(R.id.Nombre);
         txtTelefono = findViewById(R.id.txtTelefono);
         txtCorreo = findViewById(R.id.txtCorreoElectronico);
         btnGuarda = findViewById(R.id.btnGuarda);
