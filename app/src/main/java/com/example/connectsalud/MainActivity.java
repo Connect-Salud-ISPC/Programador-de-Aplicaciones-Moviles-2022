@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
 import android.database.sqlite.SQLiteDatabase;
 import com.example.connectsalud.Adaptadores;
 import com.example.connectsalud.Adaptadores.ListaUsuariosAdapter;
@@ -14,6 +15,9 @@ import com.example.connectsalud.db.DbHelper;
 import com.example.connectsalud.Entidades.Usuarios;
 
 import java.util.ArrayList;
+=======
+import android.widget.EditText;
+>>>>>>> ce9cc168e54c06e040679b4f6acba2b5858f5c15
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView listaUsuarios;
@@ -62,4 +66,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegistroPaciente.class);
         startActivity(intent);
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ce9cc168e54c06e040679b4f6acba2b5858f5c15
 }
