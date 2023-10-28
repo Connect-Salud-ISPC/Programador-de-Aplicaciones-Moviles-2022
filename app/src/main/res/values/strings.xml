@@ -30,4 +30,26 @@
     <string name="text_message_profesional">Selecciona un profesional</string>
     <string name="text_message_diahora">Selecciona un día y horario</string>
 
+    <!-- Sinner especialidad -->
+    <string name="spn_title_esp">Selecciona una especialidad</string>
+    <string-array name="item_esp">
+        <item>Seleccionar</item>
+        <item>Especialidad 1</item>
+        <item>Especialidad 2</item>
+        <item>Especialidad 3</item>
+        <item>Especialidad 4</item>
+    </string-array>
+
+    <!-- Sinner profesional -->
+    <string name="spn_title_prof">Selecciona un profesional</string>
+    <string-array name="item_prof">
+        <item>Seleccionar</item>
+        <item>Profesional 1</item>
+        <item>Profesional 2</item>
+        <item>Profesional 3</item>
+        <item>Profesional 4</item>
+    </string-array>
+
+
+
 </resources>
