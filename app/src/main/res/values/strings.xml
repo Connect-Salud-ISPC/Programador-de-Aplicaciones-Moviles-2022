@@ -17,12 +17,15 @@
 
     <!-- Registro -->
     <string name="text_message2">Completa el formulario para registrarte</string>
-    <string name="input_dni">DNI</string>
-    <string name="input_nombre">Nombre</string>
-    <string name="input_apellido">Apellido</string>
-    <string name="input_telefono">Teléfono</string>
-    <string name="input_nacimiento">Fecha de Nacimiento</string>
-    <string name="button_registrarme">Registrarse</string>
+    <string name="agregardnipaciente">DNI</string>
+    <string name="agregarnombrepaciente">Nombre</string>
+    <string name="agregarapellidopaciente">Apellido</string>
+    <string name="agregartelefonopaciente">Teléfono</string>
+    <string name="agregarnacimientopaciente">Fecha de Nacimiento</string>
+    <string name="agregarmailpaciente">Email</string>
+    <string name="agregarpasspaciente">Contraseña</string>
+    <string name="agregarpassagainpaciente">Repite Contraseña</string>
+    <string name="button_registro">Registrarme</string>
 
     <!-- Sacar turno -->
     <string name="text_message3">Selecciona cada una de las opciones disponibles</string>
@@ -50,7 +53,6 @@
         <item>Profesional 4</item>
     </string-array>
 
-
     <!-- Profesionales-->
     <string name="lista">Ver lista de profesionales disponibles</string>
     <string name="especialidad">Especialidad</string>
@@ -65,6 +67,5 @@
     <string name="email">Ingresar el email</string>
     <string name="button_editar">Editar</string>
     <string name="button_guardar">Guardar</string>
-
 
 </resources>
