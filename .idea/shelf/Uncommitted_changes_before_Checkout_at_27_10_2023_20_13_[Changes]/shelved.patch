@@ -1,0 +1,1994 @@
+Index: app/src/main/res/layout/fragment_second3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_second3.xml b/app/src/main/res/layout/fragment_second3.xml
+new file mode 100644
+--- /dev/null	(date 1698366343497)
++++ b/app/src/main/res/layout/fragment_second3.xml	(date 1698366343497)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Second3Fragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/previous"
++            app:layout_constraintBottom_toTopOf="@id/textview_second"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_second" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/db/DbUsuarios.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/db/DbUsuarios.java b/app/src/main/java/com/example/connectsalud/db/DbUsuarios.java
+new file mode 100644
+--- /dev/null	(date 1698363918336)
++++ b/app/src/main/java/com/example/connectsalud/db/DbUsuarios.java	(date 1698363918336)
+@@ -0,0 +1,21 @@
++package com.example.connectsalud.db;
++
++import android.content.ContentValues;
++import android.content.Context;
++import android.database.Cursor;
++import android.database.sqlite.SQLiteDatabase;
++
++import androidx.annotation.Nullable;
++
++import com.example.connectsalud.entidades.Usuarios;
++
++import java.util.ArrayList;
++
++public class DbUsuarios extends DbHelper {
++
++    Context context;
++
++    public DbUsuarios(@Nullable Context context) {
++        super(context);
++        this.context = context;
++    }
+Index: app/src/main/res/layout/fragment_first3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_first3.xml b/app/src/main/res/layout/fragment_first3.xml
+new file mode 100644
+--- /dev/null	(date 1698366343383)
++++ b/app/src/main/res/layout/fragment_first3.xml	(date 1698366343383)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".First3Fragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/next"
++            app:layout_constraintBottom_toTopOf="@id/textview_first"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_first" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/Second3Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/Second3Fragment.java b/app/src/main/java/com/example/connectsalud/Second3Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366343293)
++++ b/app/src/main/java/com/example/connectsalud/Second3Fragment.java	(date 1698366343293)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentSecond3Binding;
++
++public class Second3Fragment extends Fragment {
++
++    private FragmentSecond3Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentSecond3Binding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(Second3Fragment.this)
++                        .navigate(R.id.action_Second3Fragment_to_First3Fragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/First3Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/First3Fragment.java b/app/src/main/java/com/example/connectsalud/First3Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366343159)
++++ b/app/src/main/java/com/example/connectsalud/First3Fragment.java	(date 1698366343159)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentFirst3Binding;
++
++public class First3Fragment extends Fragment {
++
++    private FragmentFirst3Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentFirst3Binding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(First3Fragment.this)
++                        .navigate(R.id.action_First3Fragment_to_Second3Fragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/VerActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/VerActivity.java b/app/src/main/java/com/example/connectsalud/VerActivity.java
+new file mode 100644
+--- /dev/null	(date 1698366464728)
++++ b/app/src/main/java/com/example/connectsalud/VerActivity.java	(date 1698366464728)
+@@ -0,0 +1,101 @@
++package com.example.connectsalud;
++
++import androidx.appcompat.app.AlertDialog;
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.DialogInterface;
++import android.content.Intent;
++import android.os.Bundle;
++import android.renderscript.ScriptGroup;
++import android.text.InputType;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++
++import com.example.connectsalud.db.DbUsuarios;
++import com.example.connectsalud.entidades.Usuarios;
++import com.google.android.material.floatingactionbutton.FloatingActionButton;
++
++public class VerActivity extends AppCompatActivity {
++
++    EditText txtNombre, txtTelefono, txtCorreo;
++    Button btnGuarda;
++    FloatingActionButton fabEditar, fabEliminar;
++
++    Usuario usuario;
++    int id = 0;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_ver);
++
++        txtNombre = findViewById(R.id.txtNombre);
++        txtTelefono = findViewById(R.id.txtTelefono);
++        txtCorreo = findViewById(R.id.txtCorreoElectronico);
++        fabEditar = findViewById(R.id.fabEditar);
++        fabEliminar = findViewById(R.id.fabEliminar);
++        btnGuarda = findViewById(R.id.btnGuarda);
++        btnGuarda.setVisibility(View.INVISIBLE);
++
++        if(savedInstanceState == null){
++            Bundle extras = getIntent().getExtras();
++            if(extras == null){
++                id = Integer.parseInt(null);
++            } else {
++                id = extras.getInt("ID");
++            }
++        } else {
++            id = (int) savedInstanceState.getSerializable("ID");
++        }
++
++        final DbUsuarios dbUsuarios = new DbUsuarios(VerActivity.this);
++        usuario = dbUsuarios.verUsuario(id);
++
++        if(usuario != null){
++            txtNombre.setText(usuario.getNombre());
++            txtTelefono.setText(usuario.getTelefono());
++            txtCorreo.setText(usuario.getCorreo_electornico());
++            txtNombre.setInputType(InputType.TYPE_NULL);
++            txtTelefono.setInputType(InputType.TYPE_NULL);
++            txtCorreo.setInputType(InputType.TYPE_NULL);
++        }
++
++        fabEditar.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(VerActivity.this, EditarActivity.class);
++                intent.putExtra("ID", id);
++                startActivity(intent);
++            }
++        });
++
++        fabEliminar.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                AlertDialog.Builder builder = new AlertDialog.Builder(VerActivity.this);
++                builder.setMessage("¿Desea eliminar este usuario?")
++                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
++                            @Override
++                            public void onClick(DialogInterface dialogInterface, int i) {
++
++                                if(dbUsuarios.eliminarUsuario(id)){
++                                    lista();
++                                }
++                            }
++                        })
++                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
++                            @Override
++                            public void onClick(DialogInterface dialogInterface, int i) {
++
++                            }
++                        }).show();
++            }
++        });
++    }
++
++    private void lista(){
++        Intent intent = new Intent(this, MainActivity.class);
++        startActivity(intent);
++    }
++}
+Index: app/src/main/java/com/example/connectsalud/UsuariosSQLiteHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/UsuariosSQLiteHelper.java b/app/src/main/java/com/example/connectsalud/UsuariosSQLiteHelper.java
+new file mode 100644
+--- /dev/null	(date 1698207099595)
++++ b/app/src/main/java/com/example/connectsalud/UsuariosSQLiteHelper.java	(date 1698207099595)
+@@ -0,0 +1,22 @@
++package com.example.connectsalud;
++
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++import androidx.annotation.Nullable;
++
++public class AdminSQLiteOpenHelper  extends SQLiteOpenHelper {
++    public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
++        super(context, name, factory, version);
++    }
++
++    @Override
++    public void onCreate(SQLiteDatabase db) {
++        db.execSQL("create table Usuarios(dni int primary key,nombre text,apellido text, email text, telefono text, fechaNacimiento date, contraseña text)");
++    }
++
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
++
++    }
+\ No newline at end of file
+Index: app/src/main/res/layout/content_ver.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/content_ver.xml b/app/src/main/res/layout/content_ver.xml
+new file mode 100644
+--- /dev/null	(date 1698366399472)
++++ b/app/src/main/res/layout/content_ver.xml	(date 1698366399472)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior">
++
++    <fragment
++        android:id="@+id/nav_host_fragment_content_ver"
++        android:name="androidx.navigation.fragment.NavHostFragment"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        app:defaultNavHost="true"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:navGraph="@navigation/nav_graph4" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_ver.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_ver.xml b/app/src/main/res/layout/activity_ver.xml
+new file mode 100644
+--- /dev/null	(date 1698366399391)
++++ b/app/src/main/res/layout/activity_ver.xml	(date 1698366399391)
+@@ -0,0 +1,33 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:fitsSystemWindows="true"
++    tools:context=".VerActivity">
++
++    <com.google.android.material.appbar.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:fitsSystemWindows="true">
++
++        <com.google.android.material.appbar.MaterialToolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize" />
++
++    </com.google.android.material.appbar.AppBarLayout>
++
++    <include layout="@layout/content_ver" />
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/fab"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="bottom|end"
++        android:layout_marginEnd="@dimen/fab_margin"
++        android:layout_marginBottom="16dp"
++        app:srcCompat="@android:drawable/ic_dialog_email" />
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id(\"com.android.application\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.connectsalud\"\r\n    compileSdk = 33\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.connectsalud\"\r\n        minSdk = 24\r\n        targetSdk = 33\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_1_8\r\n        targetCompatibility = JavaVersion.VERSION_1_8\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation(\"androidx.appcompat:appcompat:1.6.1\")\r\n    implementation(\"com.google.android.material:material:1.9.0\")\r\n    implementation(\"androidx.constraintlayout:constraintlayout:2.1.4\")\r\n    testImplementation(\"junit:junit:4.13.2\")\r\n    androidTestImplementation(\"androidx.test.ext:junit:1.1.5\")\r\n    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.5.1\")\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision e9ec31718825d04b0bc40e7f4539ab1911583c23)
++++ b/app/build.gradle.kts	(date 1698364473252)
+@@ -29,6 +29,9 @@
+         sourceCompatibility = JavaVersion.VERSION_1_8
+         targetCompatibility = JavaVersion.VERSION_1_8
+     }
++    buildFeatures {
++        viewBinding = true
++    }
+ }
+ 
+ dependencies {
+@@ -36,6 +39,8 @@
+     implementation("androidx.appcompat:appcompat:1.6.1")
+     implementation("com.google.android.material:material:1.9.0")
+     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
++    implementation("androidx.navigation:navigation-fragment:2.5.3")
++    implementation("androidx.navigation:navigation-ui:2.5.3")
+     testImplementation("junit:junit:4.13.2")
+     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+Index: app/src/main/java/com/example/connectsalud/adaptadores/ListaUsuariosAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/adaptadores/ListaUsuariosAdapter.java b/app/src/main/java/com/example/connectsalud/adaptadores/ListaUsuariosAdapter.java
+new file mode 100644
+--- /dev/null	(date 1698364262426)
++++ b/app/src/main/java/com/example/connectsalud/adaptadores/ListaUsuariosAdapter.java	(date 1698364262426)
+@@ -0,0 +1,96 @@
++package com.example.connectsalud.adaptadores;
++
++import android.content.Context;
++import android.content.Intent;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.TextView;
++
++import androidx.annotation.NonNull;
++import androidx.recyclerview.widget.RecyclerView;
++
++
++import com.example.connectsalud.VerActivity;
++import com.example.connectsalud.entidades.Usuarios;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.stream.Collectors;
++
++public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdapter.UsuariosViewHolder> {
++
++    ArrayList<Usuarios> listaUsuarios;
++    ArrayList<Usuarios> listaUsuarios;
++
++    public ListaUsuariosAdapter(ArrayList<Usuarios> listaUsuarios) {
++        this.listaUsuarios = listaUsuarios;
++        listaOriginal = new ArrayList<>();
++        listaOriginal.addAll(listaUsuarios);
++    }
++
++    @NonNull
++    @Override
++    public UsuarioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
++        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_item_contacto, null, false);
++        return new UsuarioViewHolder(view);
++    }
++
++    @Override
++    public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position) {
++        holder.viewNombre.setText(listaUsuarios.get(position).getNombre());
++        holder.viewTelefono.setText(listaUsuarios.get(position).getTelefono());
++        holder.viewCorreo.setText(listaUsuarios.get(position).getCorreo_electornico());
++    }
++
++    public void filtrado(final String txtBuscar) {
++        int longitud = txtBuscar.length();
++        if (longitud == 0) {
++            listaUsuarios.clear();
++            listaUsuarios.addAll(listaOriginal);
++        } else {
++            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
++                List<Usuarios> collecion = listaUsuarios.stream()
++                        .filter(i -> i.getNombre().toLowerCase().contains(txtBuscar.toLowerCase()))
++                        .collect(Collectors.toList());
++                listaUsuarios.clear();
++                listaUsuarios.addAll(collecion);
++            } else {
++                for (Usuarios c : listaOriginal) {
++                    if (c.getNombre().toLowerCase().contains(txtBuscar.toLowerCase())) {
++                        listaUsuarios.add(c);
++                    }
++                }
++            }
++        }
++        notifyDataSetChanged();
++    }
++
++    @Override
++    public int getItemCount() {
++        return listaUsuarios.size();
++    }
++
++    public class UsuarioViewHolder extends RecyclerView.ViewHolder {
++
++        TextView viewNombre, viewTelefono, viewCorreo;
++
++        public UsuarioViewHolder(@NonNull View itemView) {
++            super(itemView);
++
++            viewNombre = itemView.findViewById(R.id.viewNombre);
++            viewTelefono = itemView.findViewById(R.id.viewTelefono);
++            viewCorreo = itemView.findViewById(R.id.viewCorreo);
++
++            itemView.setOnClickListener(new View.OnClickListener() {
++                @Override
++                public void onClick(View view) {
++                    Context context = view.getContext();
++                    Intent intent = new Intent(context, VerActivity.class);
++                    intent.putExtra("ID", listaUsuarios.get(getAdapterPosition()).getId());
++                    context.startActivity(intent);
++                }
++            });
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/navigation/nav_graph3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph3.xml b/app/src/main/res/navigation/nav_graph3.xml
+new file mode 100644
+--- /dev/null	(date 1698366343545)
++++ b/app/src/main/res/navigation/nav_graph3.xml	(date 1698366343545)
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="utf-8"?>
++<navigation xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/nav_graph3"
++    app:startDestination="@id/First3Fragment">
++
++    <fragment
++        android:id="@+id/First3Fragment"
++        android:name="com.example.connectsalud.First3Fragment"
++        android:label="@string/first_fragment_label"
++        tools:layout="@layout/fragment_first3">
++
++        <action
++            android:id="@+id/action_First3Fragment_to_Second3Fragment"
++            app:destination="@id/Second3Fragment" />
++    </fragment>
++    <fragment
++        android:id="@+id/Second3Fragment"
++        android:name="com.example.connectsalud.Second3Fragment"
++        android:label="@string/second_fragment_label"
++        tools:layout="@layout/fragment_second3">
++
++        <action
++            android:id="@+id/action_Second3Fragment_to_First3Fragment"
++            app:destination="@id/First3Fragment" />
++    </fragment>
++</navigation>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_second4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_second4.xml b/app/src/main/res/layout/fragment_second4.xml
+new file mode 100644
+--- /dev/null	(date 1698366400278)
++++ b/app/src/main/res/layout/fragment_second4.xml	(date 1698366400278)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Second4Fragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/previous"
++            app:layout_constraintBottom_toTopOf="@id/textview_second"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_second" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_first4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_first4.xml b/app/src/main/res/layout/fragment_first4.xml
+new file mode 100644
+--- /dev/null	(date 1698366400184)
++++ b/app/src/main/res/layout/fragment_first4.xml	(date 1698366400184)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".First4Fragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/next"
++            app:layout_constraintBottom_toTopOf="@id/textview_first"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_first" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/Second4Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/Second4Fragment.java b/app/src/main/java/com/example/connectsalud/Second4Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366400075)
++++ b/app/src/main/java/com/example/connectsalud/Second4Fragment.java	(date 1698366400075)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentSecond4Binding;
++
++public class Second4Fragment extends Fragment {
++
++    private FragmentSecond4Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentSecond4Binding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(Second4Fragment.this)
++                        .navigate(R.id.action_Second4Fragment_to_First4Fragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/First4Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/First4Fragment.java b/app/src/main/java/com/example/connectsalud/First4Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366399941)
++++ b/app/src/main/java/com/example/connectsalud/First4Fragment.java	(date 1698366399941)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentFirst4Binding;
++
++public class First4Fragment extends Fragment {
++
++    private FragmentFirst4Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentFirst4Binding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(First4Fragment.this)
++                        .navigate(R.id.action_First4Fragment_to_Second4Fragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/Entidades/Usuarios.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/Entidades/Usuarios.java b/app/src/main/java/com/example/connectsalud/Entidades/Usuarios.java
+new file mode 100644
+--- /dev/null	(date 1698364321040)
++++ b/app/src/main/java/com/example/connectsalud/Entidades/Usuarios.java	(date 1698364321040)
+@@ -0,0 +1,41 @@
++package com.example.connectsalud.entidades;
++
++public class Usuarios {
++
++    private int id;
++    private String nombre;
++    private String telefono;
++    private String correo_electornico;
++
++    public int getId() {
++        return id;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public String getNombre() {
++        return nombre;
++    }
++
++    public void setNombre(String nombre) {
++        this.nombre = nombre;
++    }
++
++    public String getTelefono() {
++        return telefono;
++    }
++
++    public void setTelefono(String telefono) {
++        this.telefono = telefono;
++    }
++
++    public String getCorreo_electornico() {
++        return correo_electornico;
++    }
++
++    public void setCorreo_electornico(String correo_electornico) {
++        this.correo_electornico = correo_electornico;
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/navigation/nav_graph4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph4.xml b/app/src/main/res/navigation/nav_graph4.xml
+new file mode 100644
+--- /dev/null	(date 1698366400296)
++++ b/app/src/main/res/navigation/nav_graph4.xml	(date 1698366400296)
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="utf-8"?>
++<navigation xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/nav_graph4"
++    app:startDestination="@id/First4Fragment">
++
++    <fragment
++        android:id="@+id/First4Fragment"
++        android:name="com.example.connectsalud.First4Fragment"
++        android:label="@string/first_fragment_label"
++        tools:layout="@layout/fragment_first4">
++
++        <action
++            android:id="@+id/action_First4Fragment_to_Second4Fragment"
++            app:destination="@id/Second4Fragment" />
++    </fragment>
++    <fragment
++        android:id="@+id/Second4Fragment"
++        android:name="com.example.connectsalud.Second4Fragment"
++        android:label="@string/second_fragment_label"
++        tools:layout="@layout/fragment_second4">
++
++        <action
++            android:id="@+id/action_Second4Fragment_to_First4Fragment"
++            app:destination="@id/First4Fragment" />
++    </fragment>
++</navigation>
+\ No newline at end of file
+Index: app/src/main/res/values-v23/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-v23/themes.xml b/app/src/main/res/values-v23/themes.xml
+new file mode 100644
+--- /dev/null	(date 1698366398961)
++++ b/app/src/main/res/values-v23/themes.xml	(date 1698366398961)
+@@ -0,0 +1,9 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++
++    <style name="Theme.ConnectSalud" parent="Base.Theme.ConnectSalud">
++        <!-- Transparent system bars for edge-to-edge. -->
++        <item name="android:navigationBarColor">@android:color/transparent</item>
++        <item name="android:statusBarColor">@android:color/transparent</item>
++        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
++    </style>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/dimens.xml b/app/src/main/res/values/dimens.xml
+new file mode 100644
+--- /dev/null	(date 1698366399021)
++++ b/app/src/main/res/values/dimens.xml	(date 1698366399021)
+@@ -0,0 +1,3 @@
++<resources>
++    <dimen name="fab_margin">16dp</dimen>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values-land/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-land/dimens.xml b/app/src/main/res/values-land/dimens.xml
+new file mode 100644
+--- /dev/null	(date 1698366399028)
++++ b/app/src/main/res/values-land/dimens.xml	(date 1698366399028)
+@@ -0,0 +1,3 @@
++<resources>
++    <dimen name="fab_margin">48dp</dimen>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values-w600dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-w600dp/dimens.xml b/app/src/main/res/values-w600dp/dimens.xml
+new file mode 100644
+--- /dev/null	(date 1698366399037)
++++ b/app/src/main/res/values-w600dp/dimens.xml	(date 1698366399037)
+@@ -0,0 +1,3 @@
++<resources>
++    <dimen name="fab_margin">48dp</dimen>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/content_editar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/content_editar.xml b/app/src/main/res/layout/content_editar.xml
+new file mode 100644
+--- /dev/null	(date 1698364474110)
++++ b/app/src/main/res/layout/content_editar.xml	(date 1698364474110)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior">
++
++    <fragment
++        android:id="@+id/nav_host_fragment_content_editar"
++        android:name="androidx.navigation.fragment.NavHostFragment"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        app:defaultNavHost="true"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:navGraph="@navigation/nav_graph" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values-w1240dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-w1240dp/dimens.xml b/app/src/main/res/values-w1240dp/dimens.xml
+new file mode 100644
+--- /dev/null	(date 1698366399045)
++++ b/app/src/main/res/values-w1240dp/dimens.xml	(date 1698366399045)
+@@ -0,0 +1,3 @@
++<resources>
++    <dimen name="fab_margin">200dp</dimen>
++</resources>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.ConnectSalud\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".RegistroPaciente\"\r\n            android:label=\"Registro\"\r\n            android:parentActivityName=\".MainActivity\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.MainActivity\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".Home\"\r\n            android:label=\"Inicio\"\r\n            android:parentActivityName=\".MainActivity\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.MainActivity\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".Profile\"\r\n            android:label=\"Mi Perfil\"\r\n            android:parentActivityName=\".Home\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.Home\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".Turnos\"\r\n            android:label=\"Mis Turnos\"\r\n            android:parentActivityName=\".Home\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.Home\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".Reserve\"\r\n            android:label=\"Sacar Turno\"\r\n            android:parentActivityName=\".Home\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.Home\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".Profesionales\"\r\n            android:label=\"Profesionales\"\r\n            android:parentActivityName=\".Home\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"com.example.connectsalud.Home\" />\r\n        </activity>\r\n        <activity\r\n            android:name=\".CerrarSesion\"\r\n            android:exported=\"false\" />\r\n    </application>\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision e9ec31718825d04b0bc40e7f4539ab1911583c23)
++++ b/app/src/main/AndroidManifest.xml	(date 1698366399304)
+@@ -13,6 +13,26 @@
+         android:theme="@style/Theme.ConnectSalud"
+         tools:targetApi="31">
+         <activity
++            android:name=".VerActivity"
++            android:exported="false"
++            android:label="@string/title_activity_ver"
++            android:theme="@style/Theme.ConnectSalud" />
++        <activity
++            android:name=".NuevoActivity"
++            android:exported="false"
++            android:label="@string/title_activity_nuevo"
++            android:theme="@style/Theme.ConnectSalud" />
++        <activity
++            android:name=".Editar"
++            android:exported="false"
++            android:label="@string/title_activity_editar"
++            android:theme="@style/Theme.ConnectSalud" />
++        <activity
++            android:name=".EditarActivity"
++            android:exported="false"
++            android:label="@string/title_activity_editar"
++            android:theme="@style/Theme.ConnectSalud" />
++        <activity
+             android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+@@ -73,4 +93,5 @@
+             android:name=".CerrarSesion"
+             android:exported="false" />
+     </application>
++
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/FirstFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/FirstFragment.java b/app/src/main/java/com/example/connectsalud/FirstFragment.java
+new file mode 100644
+--- /dev/null	(date 1698364475741)
++++ b/app/src/main/java/com/example/connectsalud/FirstFragment.java	(date 1698364475741)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentFirstBinding;
++
++public class FirstFragment extends Fragment {
++
++    private FragmentFirstBinding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentFirstBinding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(FirstFragment.this)
++                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/EditarActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/EditarActivity.java b/app/src/main/java/com/example/connectsalud/EditarActivity.java
+new file mode 100644
+--- /dev/null	(date 1698366317658)
++++ b/app/src/main/java/com/example/connectsalud/EditarActivity.java	(date 1698366317658)
+@@ -0,0 +1,86 @@
++package com.example.connectsalud;
++
++import android.annotation.SuppressLint;
++import android.content.Intent;
++import android.os.Bundle;
++import android.text.InputType;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import com.example.connectsalud.db.DbUsuarios;
++import com.example.connectsalud.entidades.Usuario;
++import com.google.android.material.floatingactionbutton.FloatingActionButton;
++
++public class EditarActivity extends AppCompatActivity {
++
++    EditText txtNombre, txtTelefono, txtCorreo;
++    Button btnGuarda;
++    FloatingActionButton fabEditar, fabEliminar;
++    boolean correcto = false;
++    Usuario usuario;
++    int id = 0;
++
++    @SuppressLint("RestrictedApi")
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_ver);
++
++        txtNombre = findViewById(R.id.txtNombre);
++        txtTelefono = findViewById(R.id.txtTelefono);
++        txtCorreo = findViewById(R.id.txtCorreoElectronico);
++        btnGuarda = findViewById(R.id.btnGuarda);
++        fabEditar = findViewById(R.id.fabEditar);
++        fabEditar.setVisibility(View.INVISIBLE);
++        fabEliminar = findViewById(R.id.fabEliminar);
++        fabEliminar.setVisibility(View.INVISIBLE);
++
++        if (savedInstanceState == null) {
++            Bundle extras = getIntent().getExtras();
++            if (extras == null) {
++                id = Integer.parseInt(null);
++            } else {
++                id = extras.getInt("ID");
++            }
++        } else {
++            id = (int) savedInstanceState.getSerializable("ID");
++        }
++
++        final DbUsuarios dbUsuarios = new DbUsuarios(EditarActivity.this);
++        usuario = dbUsuarios.verUsuario(id);
++
++        if (usuario != null) {
++            txtNombre.setText(usuario.getNombre());
++            txtTelefono.setText(usuario.getTelefono());
++            txtCorreo.setText(usuario.getCorreo_electornico());
++        }
++
++        btnGuarda.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                if (!txtNombre.getText().toString().equals("") && !txtTelefono.getText().toString().equals("")) {
++                    correcto = dbUsuarios.editarUsuario(id, txtNombre.getText().toString(), txtTelefono.getText().toString(), txtCorreo.getText().toString());
++
++                    if(correcto){
++                        Toast.makeText(EditarActivity.this, "REGISTRO MODIFICADO", Toast.LENGTH_LONG).show();
++                        verRegistro();
++                    } else {
++                        Toast.makeText(EditarActivity.this, "ERROR AL MODIFICAR REGISTRO", Toast.LENGTH_LONG).show();
++                    }
++                } else {
++                    Toast.makeText(EditarActivity.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
++                }
++            }
++        });
++    }
++
++    private void verRegistro(){
++        Intent intent = new Intent(this, VerActivity.class);
++        intent.putExtra("ID", id);
++        startActivity(intent);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_first.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_first.xml b/app/src/main/res/layout/fragment_first.xml
+new file mode 100644
+--- /dev/null	(date 1698364476248)
++++ b/app/src/main/res/layout/fragment_first.xml	(date 1698364476248)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".FirstFragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/next"
++            app:layout_constraintBottom_toTopOf="@id/textview_first"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_first"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_first" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/SecondFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/SecondFragment.java b/app/src/main/java/com/example/connectsalud/SecondFragment.java
+new file mode 100644
+--- /dev/null	(date 1698364476104)
++++ b/app/src/main/java/com/example/connectsalud/SecondFragment.java	(date 1698364476104)
+@@ -0,0 +1,47 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++
++import com.example.connectsalud.databinding.FragmentSecondBinding;
++
++public class SecondFragment extends Fragment {
++
++    private FragmentSecondBinding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++        binding = FragmentSecondBinding.inflate(inflater, container, false);
++        return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(SecondFragment.this)
++                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
++            }
++        });
++    }
++
++    @Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_second.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_second.xml b/app/src/main/res/layout/fragment_second.xml
+new file mode 100644
+--- /dev/null	(date 1698364476523)
++++ b/app/src/main/res/layout/fragment_second.xml	(date 1698364476523)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".SecondFragment">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++
++        <Button
++            android:id="@+id/button_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/previous"
++            app:layout_constraintBottom_toTopOf="@id/textview_second"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textview_second"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="@string/lorem_ipsum"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/button_second" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/res/navigation/nav_graph.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph.xml b/app/src/main/res/navigation/nav_graph.xml
+new file mode 100644
+--- /dev/null	(date 1698364476726)
++++ b/app/src/main/res/navigation/nav_graph.xml	(date 1698364476726)
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="utf-8"?>
++<navigation xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/nav_graph"
++    app:startDestination="@id/FirstFragment">
++
++    <fragment
++        android:id="@+id/FirstFragment"
++        android:name="com.example.connectsalud.FirstFragment"
++        android:label="@string/first_fragment_label"
++        tools:layout="@layout/fragment_first">
++
++        <action
++            android:id="@+id/action_FirstFragment_to_SecondFragment"
++            app:destination="@id/SecondFragment" />
++    </fragment>
++    <fragment
++        android:id="@+id/SecondFragment"
++        android:name="com.example.connectsalud.SecondFragment"
++        android:label="@string/second_fragment_label"
++        tools:layout="@layout/fragment_second">
++
++        <action
++            android:id="@+id/action_SecondFragment_to_FirstFragment"
++            app:destination="@id/FirstFragment" />
++    </fragment>
++</navigation>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">ConnectSalud</string>\r\n    <string name=\"text_welcome\">Bienvenido</string>\r\n    <string name=\"text_message1\">Completa con tus datos para ingresar</string>\r\n    <string name=\"input_email\">Email</string>\r\n    <string name=\"input_pass\">Contraseña</string>\r\n    <string name=\"input_passagain\">Repite Contraseña</string>\r\n    <string name=\"button_login\">Iniciar Sesión</string>\r\n    <string name=\"img_logo\">Imagen del logo</string>\r\n    <string name=\"button_passforgot\">¿Olvidó su contraseña?</string>\r\n    <string name=\"button_register\">Registrarse</string>\r\n    <string name=\"button_perfil\">Mi Perfil</string>\r\n    <string name=\"button_reserve\">Reservar Turno</string>\r\n    <string name=\"button_profesionales\">Profesionales</string>\r\n    <string name=\"button_turnos\">Mis Turnos</string>\r\n    <string name=\"button_cerrar_sesion\">Cerrar Sesion</string>\r\n\r\n    <!-- Registro -->\r\n    <string name=\"text_message2\">Completa el formulario para registrarte</string>\r\n    <string name=\"input_dni\">DNI</string>\r\n    <string name=\"input_nombre\">Nombre</string>\r\n    <string name=\"input_apellido\">Apellido</string>\r\n    <string name=\"input_telefono\">Teléfono</string>\r\n    <string name=\"input_nacimiento\">Fecha de Nacimiento</string>\r\n    <string name=\"button_registrarme\">Registrarse</string>\r\n\r\n    <!-- Sacar turno -->\r\n    <string name=\"text_message3\">Selecciona cada una de las opciones disponibles</string>\r\n    <string name=\"text_message_especialidad\">Selecciona una especialidad</string>\r\n    <string name=\"text_message_profesional\">Selecciona un profesional</string>\r\n    <string name=\"text_message_diahora\">Selecciona un día y horario</string>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision e9ec31718825d04b0bc40e7f4539ab1911583c23)
++++ b/app/src/main/res/values/strings.xml	(date 1698366399203)
+@@ -29,5 +29,50 @@
+     <string name="text_message_especialidad">Selecciona una especialidad</string>
+     <string name="text_message_profesional">Selecciona un profesional</string>
+     <string name="text_message_diahora">Selecciona un día y horario</string>
++    <string name="title_activity_editar">EditarActivity</string>
++    <!-- Strings used for fragments for navigation -->
++    <string name="first_fragment_label">First Fragment</string>
++    <string name="second_fragment_label">Second Fragment</string>
++    <string name="next">Next</string>
++    <string name="previous">Previous</string>
++
++    <string name="lorem_ipsum">
++        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
++        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
++        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
++        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
++        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
++        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
++        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
++        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
++        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
++        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
++        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
++        bibendum, vel congue leo egestas.\n\n
++        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
++        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
++        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
++        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
++        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
++        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
++        est.\n\n
++        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
++        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
++        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
++        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
++        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
++        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
++        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
++        convallis.\n\n
++        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
++        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
++        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
++        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
++        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
++        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
++        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
++    </string>
++    <string name="title_activity_nuevo">NuevoActivity</string>
++    <string name="title_activity_ver">VerActivity</string>
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/content_editar2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/content_editar2.xml b/app/src/main/res/layout/content_editar2.xml
+new file mode 100644
+--- /dev/null	(date 1698366259059)
++++ b/app/src/main/res/layout/content_editar2.xml	(date 1698366259059)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior">
++
++    <fragment
++        android:id="@+id/nav_host_fragment_content_editar2"
++        android:name="androidx.navigation.fragment.NavHostFragment"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:defaultNavHost="true"
++        app:navGraph="@navigation/nav_graph2" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_editar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_editar.xml b/app/src/main/res/layout/activity_editar.xml
+new file mode 100644
+--- /dev/null	(date 1698366259013)
++++ b/app/src/main/res/layout/activity_editar.xml	(date 1698366259013)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.coordinatorlayout.widget.CoordinatorLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:fitsSystemWindows="true"
++    tools:context=".Editar">
++
++    <com.google.android.material.appbar.AppBarLayout
++        android:layout_height="wrap_content"
++        android:layout_width="match_parent"
++        android:fitsSystemWindows="true"
++        >
++
++        <com.google.android.material.appbar.MaterialToolbar
++            android:id="@+id/toolbar"
++            android:layout_width = "match_parent"
++            android:layout_height = "?attr/actionBarSize" />
++
++  </com.google.android.material.appbar.AppBarLayout>
++
++  <include layout="@layout/content_editar2"/>
++
++  <com.google.android.material.floatingactionbutton.FloatingActionButton
++  android:id="@+id/fab"
++  android:layout_width="wrap_content"
++  android:layout_height="wrap_content"
++  android:layout_gravity="bottom|end"
++  android:layout_marginEnd="@dimen/fab_margin"
++  android:layout_marginBottom="16dp"
++  app:srcCompat="@android:drawable/ic_dialog_email" />
++
++  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_second2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_second2.xml b/app/src/main/res/layout/fragment_second2.xml
+new file mode 100644
+--- /dev/null	(date 1698366259089)
++++ b/app/src/main/res/layout/fragment_second2.xml	(date 1698366259089)
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Second2Fragment">
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++    <Button
++        android:id="@+id/button_second"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/previous"
++        app:layout_constraintBottom_toTopOf="@id/textview_second"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/textview_second"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="16dp"
++        android:text="@string/lorem_ipsum"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/button_second" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_first2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_first2.xml b/app/src/main/res/layout/fragment_first2.xml
+new file mode 100644
+--- /dev/null	(date 1698366258995)
++++ b/app/src/main/res/layout/fragment_first2.xml	(date 1698366258995)
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.core.widget.NestedScrollView
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".First2Fragment">
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:padding="16dp">
++    <Button
++        android:id="@+id/button_first"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/next"
++        app:layout_constraintBottom_toTopOf="@id/textview_first"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/textview_first"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="16dp"
++        android:text="@string/lorem_ipsum"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/button_first" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</androidx.core.widget.NestedScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/Second2Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/Second2Fragment.java b/app/src/main/java/com/example/connectsalud/Second2Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366259100)
++++ b/app/src/main/java/com/example/connectsalud/Second2Fragment.java	(date 1698366259100)
+@@ -0,0 +1,46 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++import com.example.connectsalud.databinding.FragmentSecond2Binding;
++
++public class Second2Fragment extends Fragment {
++
++private FragmentSecond2Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++      binding = FragmentSecond2Binding.inflate(inflater, container, false);
++      return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(Second2Fragment.this)
++                        .navigate(R.id.action_Second2Fragment_to_First2Fragment);
++            }
++        });
++    }
++
++@Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/First2Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/First2Fragment.java b/app/src/main/java/com/example/connectsalud/First2Fragment.java
+new file mode 100644
+--- /dev/null	(date 1698366258977)
++++ b/app/src/main/java/com/example/connectsalud/First2Fragment.java	(date 1698366258977)
+@@ -0,0 +1,46 @@
++package com.example.connectsalud;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.fragment.app.Fragment;
++import androidx.navigation.fragment.NavHostFragment;
++import com.example.connectsalud.databinding.FragmentFirst2Binding;
++
++public class First2Fragment extends Fragment {
++
++private FragmentFirst2Binding binding;
++
++    @Override
++    public View onCreateView(
++            LayoutInflater inflater, ViewGroup container,
++            Bundle savedInstanceState
++    ) {
++
++      binding = FragmentFirst2Binding.inflate(inflater, container, false);
++      return binding.getRoot();
++
++    }
++
++    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
++        super.onViewCreated(view, savedInstanceState);
++
++        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                NavHostFragment.findNavController(First2Fragment.this)
++                        .navigate(R.id.action_First2Fragment_to_Second2Fragment);
++            }
++        });
++    }
++
++@Override
++    public void onDestroyView() {
++        super.onDestroyView();
++        binding = null;
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/NuevoActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/NuevoActivity.java b/app/src/main/java/com/example/connectsalud/NuevoActivity.java
+new file mode 100644
+--- /dev/null	(date 1698366383200)
++++ b/app/src/main/java/com/example/connectsalud/NuevoActivity.java	(date 1698366383200)
+@@ -0,0 +1,55 @@
++package com.example.connectsalud;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import com.example.connectsalud.db.DbUsuarios;
++
++public class NuevoActivity extends AppCompatActivity {
++
++    EditText txtNombre, txtTelefono, txtCorreoElectronico;
++    Button btnGuarda;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_nuevo);
++
++        txtNombre = findViewById(R.id.txtNombre);
++        txtTelefono = findViewById(R.id.txtTelefono);
++        txtCorreoElectronico = findViewById(R.id.txtCorreoElectronico);
++        btnGuarda = findViewById(R.id.btnGuarda);
++
++        btnGuarda.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                if(!txtNombre.getText().toString().equals("") && !txtTelefono.getText().toString().equals("")) {
++
++                    DbUsuario dbUsuarios = new DbUsuarios(NuevoActivity.this);
++                    long id = dbUsuarios.insertarUsuario(txtNombre.getText().toString(), txtTelefono.getText().toString(), txtCorreoElectronico.getText().toString());
++
++                    if (id > 0) {
++                        Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
++                        limpiar();
++                    } else {
++                        Toast.makeText(NuevoActivity.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
++                    }
++                } else {
++                    Toast.makeText(NuevoActivity.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
++                }
++            }
++        });
++    }
++
++    private void limpiar() {
++        txtNombre.setText("");
++        txtTelefono.setText("");
++        txtCorreoElectronico.setText("");
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/content_nuevo.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/content_nuevo.xml b/app/src/main/res/layout/content_nuevo.xml
+new file mode 100644
+--- /dev/null	(date 1698366342768)
++++ b/app/src/main/res/layout/content_nuevo.xml	(date 1698366342768)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior">
++
++    <fragment
++        android:id="@+id/nav_host_fragment_content_nuevo"
++        android:name="androidx.navigation.fragment.NavHostFragment"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        app:defaultNavHost="true"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:navGraph="@navigation/nav_graph3" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/connectsalud/db/DbHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/connectsalud/db/DbHelper.java b/app/src/main/java/com/example/connectsalud/db/DbHelper.java
+new file mode 100644
+--- /dev/null	(date 1698363879018)
++++ b/app/src/main/java/com/example/connectsalud/db/DbHelper.java	(date 1698363879018)
+@@ -0,0 +1,36 @@
++package com.example.connectsalud.db;
++
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++import androidx.annotation.Nullable;
++
++public class DbHelper extends SQLiteOpenHelper {
++
++    private static final int DATABASE_VERSION = 2;
++    private static final String DATABASE_NOMBRE = "usuario.db";
++    public static final String TABLE_USUARIOS = "t_usuario";
++
++    public DbHelper(@Nullable Context context) {
++        super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
++    }
++
++    @Override
++    public void onCreate(SQLiteDatabase sqLiteDatabase) {
++
++        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USUARIOS + "(" +
++                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
++                "nombre TEXT NOT NULL," +
++                "telefono TEXT NOT NULL," +
++                "correo_electronico TEXT)");
++    }
++
++    @Override
++    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
++
++        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_USUARIOS);
++        onCreate(sqLiteDatabase);
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_nuevo.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_nuevo.xml b/app/src/main/res/layout/activity_nuevo.xml
+new file mode 100644
+--- /dev/null	(date 1698366342718)
++++ b/app/src/main/res/layout/activity_nuevo.xml	(date 1698366342718)
+@@ -0,0 +1,33 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:fitsSystemWindows="true"
++    tools:context=".NuevoActivity">
++
++    <com.google.android.material.appbar.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:fitsSystemWindows="true">
++
++        <com.google.android.material.appbar.MaterialToolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize" />
++
++    </com.google.android.material.appbar.AppBarLayout>
++
++    <include layout="@layout/content_nuevo" />
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/fab"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="bottom|end"
++        android:layout_marginEnd="@dimen/fab_margin"
++        android:layout_marginBottom="16dp"
++        app:srcCompat="@android:drawable/ic_dialog_email" />
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: app/src/main/res/navigation/nav_graph2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph2.xml b/app/src/main/res/navigation/nav_graph2.xml
+new file mode 100644
+--- /dev/null	(date 1698366258958)
++++ b/app/src/main/res/navigation/nav_graph2.xml	(date 1698366258958)
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="utf-8"?>
++<navigation xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/nav_graph2"
++    app:startDestination="@id/First2Fragment">
++
++    <fragment
++        android:id="@+id/First2Fragment"
++        android:name="com.example.connectsalud.First2Fragment"
++        android:label="@string/first_fragment_label"
++        tools:layout="@layout/fragment_first2" >
++
++        <action
++            android:id="@+id/action_First2Fragment_to_Second2Fragment"
++            app:destination="@id/Second2Fragment" />
++    </fragment>
++    <fragment
++        android:id="@+id/Second2Fragment"
++        android:name="com.example.connectsalud.Second2Fragment"
++        android:label="@string/second_fragment_label"
++        tools:layout="@layout/fragment_second2" >
++
++        <action
++            android:id="@+id/action_Second2Fragment_to_First2Fragment"
++            app:destination="@id/First2Fragment" />
++    </fragment>
++</navigation>
+\ No newline at end of file
