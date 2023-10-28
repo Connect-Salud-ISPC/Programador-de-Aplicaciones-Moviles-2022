@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ListaUsuariosAdapter adapter;
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
-    @Override
+    /*    */@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
