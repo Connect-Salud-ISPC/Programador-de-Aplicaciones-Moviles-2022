@@ -1,16 +1,71 @@
 <resources>
     <string name="app_name">ConnectSalud</string>
     <string name="text_welcome">Bienvenido</string>
-    <string name="text_mesagge1">Completa con tus datos para ingresar</string>
+    <string name="text_message1">Completa con tus datos para ingresar</string>
     <string name="input_email">Email</string>
     <string name="input_pass">Contraseña</string>
+    <string name="input_passagain">Repite Contraseña</string>
     <string name="button_login">Iniciar Sesión</string>
     <string name="img_logo">Imagen del logo</string>
     <string name="button_passforgot">¿Olvidó su contraseña?</string>
     <string name="button_register">Registrarse</string>
-    <string name="button_perfil">Perfil</string>
+    <string name="button_perfil">Mi Perfil</string>
     <string name="button_reserve">Reservar Turno</string>
     <string name="button_profesionales">Profesionales</string>
     <string name="button_turnos">Mis Turnos</string>
     <string name="button_cerrar_sesion">Cerrar Sesion</string>
+
+    <!-- Registro -->
+    <string name="text_message2">Completa el formulario para registrarte</string>
+    <string name="agregardnipaciente">DNI</string>
+    <string name="agregarnombrepaciente">Nombre</string>
+    <string name="agregarapellidopaciente">Apellido</string>
+    <string name="agregartelefonopaciente">Teléfono</string>
+    <string name="agregarnacimientopaciente">Fecha de Nacimiento</string>
+    <string name="agregarmailpaciente">Email</string>
+    <string name="agregarpasspaciente">Contraseña</string>
+    <string name="agregarpassagainpaciente">Repite Contraseña</string>
+    <string name="button_registro">Registrarme</string>
+
+    <!-- Sacar turno -->
+    <string name="text_message3">Selecciona cada una de las opciones disponibles</string>
+    <string name="text_message_especialidad">Selecciona una especialidad</string>
+    <string name="text_message_profesional">Selecciona un profesional</string>
+    <string name="text_message_diahora">Selecciona un día y horario</string>
+
+    <!-- Sinner especialidad -->
+    <string name="spn_title_esp">Selecciona una especialidad</string>
+    <string-array name="item_esp">
+        <item>Seleccionar</item>
+        <item>Especialidad 1</item>
+        <item>Especialidad 2</item>
+        <item>Especialidad 3</item>
+        <item>Especialidad 4</item>
+    </string-array>
+
+    <!-- Sinner profesional -->
+    <string name="spn_title_prof">Selecciona un profesional</string>
+    <string-array name="item_prof">
+        <item>Seleccionar</item>
+        <item>Profesional 1</item>
+        <item>Profesional 2</item>
+        <item>Profesional 3</item>
+        <item>Profesional 4</item>
+    </string-array>
+
+    <!-- Profesionales-->
+    <string name="lista">Ver lista de profesionales disponibles</string>
+    <string name="especialidad">Especialidad</string>
+    <string name="profesional">Especialidad</string>
+
+    <!-- Perfil-->
+    <string name="dni">DNI</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="telefono">Teléfono</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="email">Ingresar el email</string>
+    <string name="button_editar">Editar</string>
+    <string name="button_guardar">Guardar</string>
+
 </resources>
