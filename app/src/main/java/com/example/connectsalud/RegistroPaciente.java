@@ -13,13 +13,13 @@ public class RegistroPaciente extends AppCompatActivity {
 
     EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente, agregartipousuariopaciente;
 
-    AdminSQLiteOpenHelper admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registropaciente);
 
+        /*
         agregardnipaciente = findViewById(R.id.agregardnipaciente);
         agregarnombrepaciente = findViewById(R.id.agregarnombrepaciente);
         agregarapellidopaciente = findViewById(R.id.agregarapellidopaciente);
@@ -29,8 +29,11 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarpasspaciente = findViewById(R.id.agregarpasspaciente);
         agregarpassagainpaciente = findViewById(R.id.agregarpassagainpaciente);
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
+        */
+
     }
 
+    /*
     public void agregarPaciente(View view)
     {
         SQLiteDatabase db =admin.getWritableDatabase();
@@ -56,4 +59,6 @@ public class RegistroPaciente extends AppCompatActivity {
         db.close();
         Toast.makeText(this, "Se almacenó el usuario", Toast.LENGTH_SHORT).show();
     }
+    */
+
 }
