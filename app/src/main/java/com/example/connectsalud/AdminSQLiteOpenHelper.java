@@ -1,4 +1,3 @@
-/*
 package com.example.connectsalud;
 
 import android.content.Context;
@@ -8,20 +7,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
+    // crear constructor:
     public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(SQLiteDatabase sqLiteDatabase, int i, int i1)
-    }
-
-
+    // crear tablas de la DB:
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table usuarios (\n" +
-                "\tiddni integer primary key,\n" +
+                "\tdni integer primary key,\n" +
                 "\tnombre text,\n" +
                 "\tapellido text,\n" +
                 "\ttelefono integer,\n" +
@@ -32,10 +27,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 ")");
     }
 
-
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
 }
-*/
