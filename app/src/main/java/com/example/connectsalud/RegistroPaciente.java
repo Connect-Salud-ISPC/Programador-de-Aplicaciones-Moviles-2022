@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class RegistroPaciente extends AppCompatActivity {
 
-    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente;
+    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente, agregartipousuariopaciente;
 
     AdminSQLiteOpenHelper admin;
 
@@ -42,7 +42,7 @@ public class RegistroPaciente extends AppCompatActivity {
         registro.put("nacimiento",agregarnacimientopaciente.getText().toString());
         registro.put("email",agregarmailpaciente.getText().toString());
         registro.put("pass",agregarpasspaciente.getText().toString());
-        registro.put("passagain",agregarpassagainpaciente.getText().toString());
+        registro.put("tipousuario",agregartipousuariopaciente.getText().toString());
         db.insert("usuarios",null, registro);
 
         agregardnipaciente.setText("");
@@ -52,7 +52,7 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarnacimientopaciente.setText("");
         agregarmailpaciente.setText("");
         agregarpasspaciente.setText("");
-        agregarpassagainpaciente.setText("");
+        agregartipousuariopaciente.setText("paciente");
         db.close();
         Toast.makeText(this, "Se almacenó el usuario", Toast.LENGTH_SHORT).show();
     }

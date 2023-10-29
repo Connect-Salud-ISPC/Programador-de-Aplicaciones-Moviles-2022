@@ -1,3 +1,4 @@
+/*
 package com.example.connectsalud;
 
 import android.content.Context;
@@ -13,6 +14,12 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL(SQLiteDatabase sqLiteDatabase, int i, int i1)
+    }
+
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table usuarios (\n" +
                 "\tiddni integer primary key,\n" +
                 "\tnombre text,\n" +
@@ -25,6 +32,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 ")");
     }
 
+
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) { }
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
 }
+*/
