@@ -167,7 +167,7 @@
         android:layout_marginBottom="40dp"
         android:backgroundTint="@color/yellow"
         android:hint="@string/button_registro"
-        android:onClick="agregar"
+        android:onClick="agregarPaciente"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textColorLink="@color/black"

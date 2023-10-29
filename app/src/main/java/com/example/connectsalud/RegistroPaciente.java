@@ -31,11 +31,11 @@ public class RegistroPaciente extends AppCompatActivity {
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
     }
 
-    public void agregar(View view)
+    public void agregarPaciente(View view)
     {
         SQLiteDatabase db =admin.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("dni",agregardnipaciente.getText().toString());
+        registro.put("iddni",agregardnipaciente.getText().toString());
         registro.put("nombre",agregarnombrepaciente.getText().toString());
         registro.put("apellido",agregarapellidopaciente.getText().toString());
         registro.put("telefono",agregartelefonopaciente.getText().toString());
