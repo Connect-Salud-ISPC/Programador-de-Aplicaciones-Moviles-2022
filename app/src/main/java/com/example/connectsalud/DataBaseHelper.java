@@ -73,10 +73,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLATURNOS);
         onCreate(db);
     }
-    
-    public boolean agregarPaciente(Usuario usuario){
-        SQLiteDatabase db=this.getReadableDatabase();
-        ContentValues contentValues=new ContentValues();
+
+    public boolean insertarUsuario(Usuario usuario){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues contentValues = new ContentValues();
         contentValues.put(COL_IDDNI, usuario.getIddni());
         contentValues.put(COL_NOMBRE, usuario.getNombre());
         contentValues.put(COL_APELLIDO, usuario.getApellido());
@@ -89,7 +89,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean agregarTurno(Turno turno){
+    /*
+    public boolean insertarTurno(Turno turno){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_IDTURNO, turno.getIdturno());
@@ -102,6 +103,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.insert(TABLATURNOS, null, contentValues);
         return true;
     }
+    */
 
 }
 
