@@ -11,15 +11,15 @@ import android.widget.Toast;
 
 public class RegistroPaciente extends AppCompatActivity {
 
-    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente, agregartipousuariopaciente;
+    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente;
 
+    AdminSQLiteOpenHelper admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registropaciente);
 
-        /*
         agregardnipaciente = findViewById(R.id.agregardnipaciente);
         agregarnombrepaciente = findViewById(R.id.agregarnombrepaciente);
         agregarapellidopaciente = findViewById(R.id.agregarapellidopaciente);
@@ -29,23 +29,20 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarpasspaciente = findViewById(R.id.agregarpasspaciente);
         agregarpassagainpaciente = findViewById(R.id.agregarpassagainpaciente);
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
-        */
-
     }
 
-    /*
     public void agregarPaciente(View view)
     {
         SQLiteDatabase db =admin.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("iddni",agregardnipaciente.getText().toString());
+        registro.put("dni",agregardnipaciente.getText().toString());
         registro.put("nombre",agregarnombrepaciente.getText().toString());
         registro.put("apellido",agregarapellidopaciente.getText().toString());
         registro.put("telefono",agregartelefonopaciente.getText().toString());
         registro.put("nacimiento",agregarnacimientopaciente.getText().toString());
         registro.put("email",agregarmailpaciente.getText().toString());
         registro.put("pass",agregarpasspaciente.getText().toString());
-        registro.put("tipousuario",agregartipousuariopaciente.getText().toString());
+        registro.put("passagain",agregarpassagainpaciente.getText().toString());
         db.insert("usuarios",null, registro);
 
         agregardnipaciente.setText("");
@@ -55,10 +52,8 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarnacimientopaciente.setText("");
         agregarmailpaciente.setText("");
         agregarpasspaciente.setText("");
-        agregartipousuariopaciente.setText("paciente");
+        agregarpassagainpaciente.setText("");
         db.close();
         Toast.makeText(this, "Se almacenó el usuario", Toast.LENGTH_SHORT).show();
     }
-    */
-
 }

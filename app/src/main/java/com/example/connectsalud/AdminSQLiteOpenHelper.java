@@ -23,7 +23,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "\tnacimiento text,\n" +
                 "\temail text,\n" +
                 "\tpass text,\n" +
-                "\ttipousuario text\n" +
+                "\tpassagain text\n" +
                 ")");
     }
 
