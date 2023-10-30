@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="app_name">ConnectSalud</string>
     <string name="text_welcome">Bienvenido</string>
@@ -68,4 +70,14 @@
     <string name="button_editar">Editar</string>
     <string name="button_guardar">Guardar</string>
 
+    <!--Turnos-->
+    <string name="button_cancelar">Cancelar turno</string>
+    <string name="button_confirmar">Confirmar turno</string>
+    <string name="fecha_hora">Fecha y Hora</string>
+    <string name="especialidad_profesional">Especialidad y profesional</string>
+    <string name="button_cancelar1">Cancelar turno</string>
+    <string name="button_confirmar1">Confirmar turno</string>
+    <string name="fecha_hora1">Fecha y Hora</string>
+    <string name="especialidad_profesional1">Especialidad y profesional</string>
 </resources>
+

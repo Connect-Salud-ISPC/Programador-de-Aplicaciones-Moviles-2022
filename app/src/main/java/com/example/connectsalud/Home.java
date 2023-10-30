@@ -33,7 +33,7 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void launchCerrar_Sesion(View view) {
+    public void launchCerrarSesion(View view) {
         Intent intent = new Intent(this, CerrarSesion.class);
         startActivity(intent);
     }
