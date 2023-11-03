@@ -10,7 +10,6 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "db1";
     private static final int DATABASE_VERSION = 1;
 
-
     public AdminSQLiteOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -22,9 +21,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "\tnombre text,\n" +
                 "\tapellido text,\n" +
                 "\ttelefono integer,\n" +
-                "\tnacimient" +
-                "" +
-                "o text,\n" +
+                "\tnacimiento text,\n" +
                 "\temail text,\n" +
                 "\tpass text,\n" +
                 "\tpassagain text\n" +
@@ -56,5 +53,34 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         long newRowId = db.insert("usuarios", null, values);
         db.close();
         return newRowId;
+    }
+
+    public long obtenerPacienteIdDesdeBaseDeDatos(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String[] projection = {"dni"};
+        String selection = "email = ?";
+        String[] selectionArgs = {email};
+
+        Cursor cursor = db.query(
+                "usuarios",  // Nombre de la tabla
+                projection,   // Columnas que quieres recuperar
+                selection,    // Clausula WHERE
+                selectionArgs, // Valores de la clausula WHERE
+                null,         // No agrupar las filas
+                null,         // No filtrar por grupos de filas
+                null          // No ordenar las filas
+        );
+
+        long pacienteId = -1; // Valor predeterminado si no se encuentra el paciente
+
+        if (cursor.moveToFirst()) {
+            pacienteId = cursor.getLong(cursor.getColumnIndexOrThrow("dni"));
+        }
+
+        cursor.close();
+        db.close();
+
+        return pacienteId;
     }
 }

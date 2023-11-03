@@ -1,17 +1,19 @@
 package com.example.connectsalud;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
-import android.database.Cursor;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistroPaciente extends AppCompatActivity {
 
-    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente, agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente, agregarpasspaciente, agregarpassagainpaciente;
+    EditText agregardnipaciente, agregarnombrepaciente, agregarapellidopaciente,
+            agregartelefonopaciente, agregarnacimientopaciente, agregarmailpaciente,
+            agregarpasspaciente, agregarpassagainpaciente;
     AdminSQLiteOpenHelper admin;
 
     @Override
@@ -38,11 +40,25 @@ public class RegistroPaciente extends AppCompatActivity {
         registro.put("nombre", agregarnombrepaciente.getText().toString());
         registro.put("apellido", agregarapellidopaciente.getText().toString());
         registro.put("telefono", agregartelefonopaciente.getText().toString());
-        registro.put("nacimiento", agregarnacimientopaciente.getText().toString());
+        registro.put("fecha_nacimiento", agregarnacimientopaciente.getText().toString());
         registro.put("email", agregarmailpaciente.getText().toString());
         registro.put("pass", agregarpasspaciente.getText().toString());
         registro.put("passagain", agregarpassagainpaciente.getText().toString());
+
+        // Insertar datos en la base de datos
         db.insert("usuarios", null, registro);
+
+        // Guardar datos en SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("dni", agregardnipaciente.getText().toString());
+        editor.putString("nombre", agregarnombrepaciente.getText().toString());
+        editor.putString("apellido", agregarapellidopaciente.getText().toString());
+        editor.putString("telefono", agregartelefonopaciente.getText().toString());
+        editor.putString("fecha_nacimiento", agregarnacimientopaciente.getText().toString());
+        editor.putString("email", agregarmailpaciente.getText().toString());
+        //
+        editor.apply();
 
         // Limpiar campos de entrada y mostrar mensaje de éxito
         limpiarCampos();
@@ -50,33 +66,8 @@ public class RegistroPaciente extends AppCompatActivity {
         Toast.makeText(this, "Se almacenó el usuario", Toast.LENGTH_SHORT).show();
     }
 
-    public void editarPaciente(View view) {
-        SQLiteDatabase db = admin.getWritableDatabase();
-        ContentValues valores = new ContentValues();
-        // Obtener datos editados de los campos de entrada de texto y actualizar en la base de datos
-        // ...
-
-        String whereClause = "dni = ?"; // Cláusula WHERE para identificar al usuario a editar
-        String[] whereArgs = new String[]{agregardnipaciente.getText().toString()}; // Valor para la cláusula WHERE
-        db.update("usuarios", valores, whereClause, whereArgs);
-        db.close();
-
-        limpiarCampos();
-        Toast.makeText(this, "Se actualizó el usuario", Toast.LENGTH_SHORT).show();
-    }
-
-    public void eliminarPaciente(View view) {
-        SQLiteDatabase db = admin.getWritableDatabase();
-        String whereClause = "dni = ?"; // Cláusula WHERE para identificar al usuario a eliminar
-        String[] whereArgs = new String[]{agregardnipaciente.getText().toString()}; // Valor para la cláusula WHERE
-        db.delete("usuarios", whereClause, whereArgs);
-        db.close();
-
-        limpiarCampos();
-        Toast.makeText(this, "Se eliminó el usuario", Toast.LENGTH_SHORT).show();
-    }
-
     private void limpiarCampos() {
+        // Limpiar campos de entrada
         agregardnipaciente.setText("");
         agregarnombrepaciente.setText("");
         agregarapellidopaciente.setText("");
@@ -87,6 +78,9 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarpassagainpaciente.setText("");
     }
 }
+
+
+
 
 /*package com.example.connectsalud;
 
