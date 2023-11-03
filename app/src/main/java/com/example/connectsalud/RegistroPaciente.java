@@ -30,6 +30,20 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarpasspaciente = findViewById(R.id.agregarpasspaciente);
         agregarpassagainpaciente = findViewById(R.id.agregarpassagainpaciente);
 
+        // Setear el hint en blanco cuando se hace clic en los campos
+        agregardnipaciente.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    agregardnipaciente.setHint("");
+                } else {
+                    agregardnipaciente.setHint("DNI");
+                }
+            }
+        });
+
+        // Repite el bloque anterior para los demás campos según sea necesario.
+
         admin = new AdminSQLiteOpenHelper(this);
     }
 
@@ -78,6 +92,7 @@ public class RegistroPaciente extends AppCompatActivity {
         agregarpassagainpaciente.setText("");
     }
 }
+
 
 
 

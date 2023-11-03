@@ -21,7 +21,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "\tnombre text,\n" +
                 "\tapellido text,\n" +
                 "\ttelefono integer,\n" +
-                "\tnacimiento text,\n" +
+                "\tfecha_nacimiento text,\n" +
                 "\temail text,\n" +
                 "\tpass text,\n" +
                 "\tpassagain text\n" +
@@ -35,18 +35,18 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     public Cursor leerPacientes() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] projection = {"dni", "nombre", "apellido", "telefono", "nacimiento", "email"};
+        String[] projection = {"dni", "nombre", "apellido", "telefono", "fecha_nacimiento", "email"};
         return db.query("usuarios", projection, null, null, null, null, null);
     }
 
-    public long insertarUsuario(String dni, String nombre, String apellido, String telefono, String nacimiento, String email, String pass, String passagain) {
+    public long insertarUsuario(String dni, String nombre, String apellido, String telefono, String fecha_nacimiento, String email, String pass, String passagain) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("dni", dni);
         values.put("nombre", nombre);
         values.put("apellido", apellido);
         values.put("telefono", telefono);
-        values.put("nacimiento", nacimiento);
+        values.put("fecha_nacimiento", fecha_nacimiento);
         values.put("email", email);
         values.put("pass", pass);
         values.put("passagain", passagain);
