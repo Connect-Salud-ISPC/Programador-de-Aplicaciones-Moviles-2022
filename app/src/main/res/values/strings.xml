@@ -30,35 +30,55 @@
     <string name="button_registro">Registrarme</string>
 
     <!-- Sacar turno -->
-    <string name="text_message3">Selecciona cada una de las opciones disponibles</string>
     <string name="text_message_especialidad">Selecciona una especialidad</string>
     <string name="text_message_profesional">Selecciona un profesional</string>
     <string name="text_message_diahora">Selecciona un día y horario</string>
 
-    <!-- Sinner especialidad -->
+    <string name="especialidad1">Nutrición</string>
+    <string name="especialidad2">Endocrinología</string>
+    <string name="especialidad3">Clínica médica</string>
+    <string name="especialidad4">Psicología</string>
+
+    <string name="profesionales1">Dra. Agustina Castillo</string>
+    <string name="profesionales2">Dra. Gabriela Durán</string>
+    <string name="profesionales3">Dr. Florencia Yodice</string>
+    <string name="profesionales4">Dr. Walter Padilla</string>
+    <string name="profesionales5">Dra. Sofía Roldán</string>
+    <string name="profesionales6">Dr. Carlos Toibero</string>
+    <string name="profesionales7">Dr. Omar Chiarulli</string>
+    <string name="profesionales8">Dra. Melina Orsi</string>
+
+    <string name="time0900">09:00</string>
+    <string name="time0930">09:30</string>
+    <string name="time1000">10:00</string>
+    <string name="time1030">10:30</string>
+    <string name="time1100">11:00</string>
+    <string name="time1130">11:30</string>
+
+    <!-- Sipnner especialidad -->
     <string name="spn_title_esp">Selecciona una especialidad</string>
     <string-array name="item_esp">
-        <item>Seleccionar</item>
-        <item>Especialidad 1</item>
-        <item>Especialidad 2</item>
-        <item>Especialidad 3</item>
-        <item>Especialidad 4</item>
+        <item>Especialidades</item>
+        <item>Nutrición</item>
+        <item>Endocrinología</item>
+        <item>Clínica médica</item>
+        <item>Psicología</item>
     </string-array>
 
-    <!-- Sinner profesional -->
+    <!-- Sipnner profesional -->
     <string name="spn_title_prof">Selecciona un profesional</string>
     <string-array name="item_prof">
-        <item>Seleccionar</item>
-        <item>Profesional 1</item>
-        <item>Profesional 2</item>
-        <item>Profesional 3</item>
-        <item>Profesional 4</item>
+        <item>Profesionales</item>
+        <item>Dra. Agustina Castillo</item>
+        <item>Dr. Walter Padilla</item>
+        <item>Dra. Sofía Roldán</item>
+        <item>Dr. Carlos Toibero</item>
+
     </string-array>
 
-    <!-- Profesionales-->
-    <string name="lista">Ver lista de profesionales disponibles</string>
+    <string name="text_message4">Lista de profesionales disponibles</string>
     <string name="especialidad">Especialidad</string>
-    <string name="profesional">Especialidad</string>
+    <string name="profesional">Profesionales</string>
 
     <!-- Perfil-->
     <string name="dni">DNI</string>
@@ -70,6 +90,7 @@
     <string name="button_editar">Editar</string>
     <string name="button_guardar">Guardar</string>
 
+<<<<<<< HEAD
     <!--Turnos-->
     <string name="button_cancelar">Cancelar turno</string>
     <string name="button_confirmar">Confirmar turno</string>
@@ -81,3 +102,9 @@
     <string name="especialidad_profesional1">Especialidad y profesional</string>
 </resources>
 
+=======
+
+
+
+</resources>
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f

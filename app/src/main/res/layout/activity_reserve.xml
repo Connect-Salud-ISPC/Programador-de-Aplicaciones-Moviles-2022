@@ -7,23 +7,10 @@
     tools:context=".Reserve">
 
     <TextView
-        android:id="@+id/text_message3"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/text_message3"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/spn_title_esp"
         android:layout_width="300dp"
         android:layout_height="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="@string/spn_title_esp"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -31,18 +18,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_message3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner_especialidad"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@color/light_grey"
         android:entries="@array/item_esp"
         android:prompt="@string/spn_title_esp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spn_title_esp" />
 
@@ -60,30 +47,138 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_especialidad" />
 
+
     <Spinner
         android:id="@+id/spinner_profesionales"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@color/light_grey"
         android:entries="@array/item_prof"
         android:prompt="@string/spn_title_prof"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spn_title_prof" />
 
     <CalendarView
         android:id="@+id/calendar"
+<<<<<<< HEAD
         android:layout_width="290dp"
         android:layout_height="300dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+=======
+        android:layout_width="298dp"
+        android:layout_height="302dp"
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_profesionales"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_profesionales" />
+
+    <Button
+        android:id="@+id/button_confirmar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="confirmarReserva"
+        android:paddingLeft="15dp"
+        android:text="Confirmar"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time1100" />
+
+    <Button
+        android:id="@+id/time0900"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="@string/time0900"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar" />
+
+    <Button
+        android:id="@+id/time0930"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="@string/time0930"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/time1000"
+        app:layout_constraintStart_toEndOf="@+id/time0900"
+        app:layout_constraintTop_toBottomOf="@+id/calendar" />
+
+    <Button
+        android:id="@+id/time1000"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:text="@string/time1000"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar" />
+
+    <Button
+        android:id="@+id/time1030"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="@string/time1030"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time0900" />
+
+    <Button
+        android:id="@+id/time1100"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="@string/time1100"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/time1130"
+        app:layout_constraintStart_toEndOf="@+id/time1030"
+        app:layout_constraintTop_toBottomOf="@+id/time0930" />
+
+    <Button
+        android:id="@+id/time1130"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:text="@string/time1130"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_grey"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time1000" />
+
 
 
     <Button

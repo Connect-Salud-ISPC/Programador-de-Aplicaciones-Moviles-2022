@@ -18,7 +18,11 @@
             android:layout_height="80dp"
             android:layout_margin="5dp"
             android:background="@color/light_grey"
+<<<<<<< HEAD
             android:hint="Fecha y hora"
+=======
+            android:hint="22/11/2023  9:00"
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
             android:padding="5dp"
             android:textColorHint="@color/black" />
 
@@ -28,7 +32,11 @@
             android:layout_height="80dp"
             android:layout_margin="5dp"
             android:background="@color/light_grey"
+<<<<<<< HEAD
             android:hint="Especialidad y profesional"
+=======
+            android:hint="Nutrición, Dra. Sofía Roldan"
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
             android:padding="5dp"
             android:textColorHint="@color/black" />
 
@@ -73,7 +81,11 @@
             android:layout_height="80dp"
             android:layout_margin="5dp"
             android:background="@color/light_grey"
+<<<<<<< HEAD
             android:hint="Fecha y hora"
+=======
+            android:hint="15/11/2023  10:30"
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
             android:padding="5dp"
             android:textColorHint="@color/black"/>
 
@@ -83,7 +95,11 @@
             android:layout_height="80dp"
             android:layout_margin="5dp"
             android:background="@color/light_grey"
+<<<<<<< HEAD
             android:hint="Especialidad y profesional"
+=======
+            android:hint="Psicología, Dr. Carlos Toibero"
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
             android:padding="5dp"
             android:textColorHint="@color/black" />
 
@@ -118,6 +134,10 @@
             android:text="Cancelar"
             android:textSize="30dp" />
     </LinearLayout>
+<<<<<<< HEAD
 </LinearLayout>
 
 
+=======
+</LinearLayout>
+>>>>>>> a09bfbc53c161e9b342210816d2faedab60cba3f
