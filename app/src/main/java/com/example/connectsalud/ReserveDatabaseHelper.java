@@ -17,6 +17,7 @@ public class ReserveDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PROFESIONAL = "profesional";
     private static final String COLUMN_FECHA = "fecha";
 
+
     public ReserveDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -29,8 +30,8 @@ public class ReserveDatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_ESPECIALIDAD + " TEXT, " +
                     COLUMN_PROFESIONAL + " TEXT, " +
-                    COLUMN_FECHA + " TEXT)";
-            db.execSQL(createTable);
+                    COLUMN_FECHA + " DATE ) ";
+                    db.execSQL(createTable);
 
             Log.d("Database", "Database created successfully");
         } catch (SQLException e) {
@@ -49,6 +50,7 @@ public class ReserveDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_ESPECIALIDAD, especialidad);
         values.put(COLUMN_PROFESIONAL, profesional);
         values.put(COLUMN_FECHA, fecha);
+
 
         // Insertar la reserva
         long reservaId = db.insert(TABLE_RESERVAS, null, values);

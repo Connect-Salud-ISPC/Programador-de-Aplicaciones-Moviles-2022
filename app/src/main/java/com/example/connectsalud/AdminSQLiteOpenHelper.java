@@ -55,10 +55,11 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public long obtenerPacienteIdDesdeBaseDeDatos(String email) {
+
+    public long obtenerPacienteIdDesdeBaseDeDatos(String dni, String nombre, String apellido, String telefono, String fecha_nacimiento, String email, String pass, String passagain) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String[] projection = {"dni"};
+        String[] projection = {"dni", "nombre", "apellido", "telefono", "fecha-nacimiento", "email", "pass", "passagain"};
         String selection = "email = ?";
         String[] selectionArgs = {email};
 

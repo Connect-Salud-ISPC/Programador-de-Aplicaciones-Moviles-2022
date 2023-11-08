@@ -32,6 +32,27 @@
     <string name="text_message_profesional">Selecciona un profesional</string>
     <string name="text_message_diahora">Selecciona un día y horario</string>
 
+    <string name="especialidad1">Nutrición</string>
+    <string name="especialidad2">Endocrinología</string>
+    <string name="especialidad3">Clínica médica</string>
+    <string name="especialidad4">Psicología</string>
+
+    <string name="profesionales1">Dra. Agustina Castillo</string>
+    <string name="profesionales2">Dra. Gabriela Durán</string>
+    <string name="profesionales3">Dr. Florencia Yodice</string>
+    <string name="profesionales4">Dr. Walter Padilla</string>
+    <string name="profesionales5">Dra. Sofía Roldán</string>
+    <string name="profesionales6">Dr. Carlos Toibero</string>
+    <string name="profesionales7">Dr. Omar Chiarulli</string>
+    <string name="profesionales8">Dra. Melina Orsi</string>
+
+    <string name="time0900">09:00</string>
+    <string name="time0930">09:30</string>
+    <string name="time1000">10:00</string>
+    <string name="time1030">10:30</string>
+    <string name="time1100">11:00</string>
+    <string name="time1130">11:30</string>
+
     <!-- Sipnner especialidad -->
     <string name="spn_title_esp">Selecciona una especialidad</string>
     <string-array name="item_esp">
@@ -67,25 +88,7 @@
     <string name="button_editar">Editar</string>
     <string name="button_guardar">Guardar</string>
 
-    <string name="time0900">09:00</string>
-    <string name="time0930">09:30</string>
-    <string name="time1000">10:00</string>
-    <string name="time1030">10:30</string>
-    <string name="time1100">11:00</string>
-    <string name="time1130">11:30</string>
 
-    <string name="especialidad1">Nutrición</string>
-    <string name="especialidad2">Endocrinología</string>
-    <string name="especialidad3">Clínica médica</string>
-    <string name="especialidad4">Psicología</string>
 
-    <string name="profesionales1">Dra. Agustina Castillo</string>
-    <string name="profesionales2">Dra. Gabriela Durán</string>
-    <string name="profesionales3">Dr. Florencia Yodice</string>
-    <string name="profesionales4">Dr. Walter Padilla</string>
-    <string name="profesionales5">Dra. Sofía Roldán</string>
-    <string name="profesionales6">Dr. Carlos Toibero</string>
-    <string name="profesionales7">Dr. Omar Chiarulli</string>
-    <string name="profesionales8">Dra. Melina Orsi</string>
 
 </resources>

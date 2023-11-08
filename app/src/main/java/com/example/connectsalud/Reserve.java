@@ -57,10 +57,12 @@ public class Reserve extends AppCompatActivity {
         String especialidad = spinnerEspecialidades.getSelectedItem().toString();
         String profesional = spinnerProfesionales.getSelectedItem().toString();
         String fecha = obtenerFechaSeleccionada();
+        String hora = obtenerhoraSeleccionada();
 
         Log.d("Reserva", "Especialidad: " + especialidad);
         Log.d("Reserva", "Profesional: " + profesional);
         Log.d("Reserva", "Fecha: " + fecha);
+        Log.d("Reserva", "Hora: " + hora);
 
         // Insertar la reserva en la base de datos
         long reservaId = databaseHelper.insertReserva(especialidad, profesional, fecha);
@@ -79,9 +81,11 @@ public class Reserve extends AppCompatActivity {
         // Implementa lógica para obtener la fecha seleccionada del CalendarView
         // Por ejemplo, podrías obtenerla como una cadena en el formato deseado
         // (año-mes-día) y devolverla desde este método
-        return "2023-12-01"; // Ejemplo de fecha seleccionada (debes implementar la lógica real)
+        return "15-11-2023 10:30"; // Ejemplo de fecha seleccionada (debes implementar la lógica real)
     }
-
+    private String obtenerhoraSeleccionada() {
+        return "09:00";
+    }
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
